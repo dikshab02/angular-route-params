@@ -1,0 +1,21 @@
+<p>home works!</p>
+<div>
+  <table class="width">
+    <tr>
+      <th *ngFor="let head of heading">{{head}}</th>
+    </tr>
+    <tr *ngFor="let data of gridData;let i=index;">
+      <td>
+      {{ i+1 }}
+      </td>
+      <td class="button-row">
+        <button mat-button color="primary" [routerLink]="['/employee',data.employeeId]">
+        {{ data.employeeName }}
+      </button>
+      </td>
+      <td>
+        {{ data.age }}
+      </td>
+    </tr>
+  </table>
+</div>
